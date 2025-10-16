@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hotels",
+  "info": {
+    "singularName": "hotel",
+    "pluralName": "hotels",
+    "displayName": "hotel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hotel_name": {
+      "type": "string"
+    },
+    "hotel_mobile": {
+      "type": "biginteger"
+    },
+    "hotel_alt_mobile": {
+      "type": "biginteger"
+    },
+    "hotel_email": {
+      "type": "email"
+    },
+    "hotel_website": {
+      "type": "string"
+    },
+    "hotel_gst_no": {
+      "type": "string"
+    },
+    "hotel_address_line1": {
+      "type": "string"
+    },
+    "hotel_address_line2": {
+      "type": "string"
+    },
+    "hotel_state": {
+      "type": "string"
+    },
+    "hotel_district": {
+      "type": "string"
+    },
+    "hotel_country": {
+      "type": "string"
+    },
+    "hotel_pincode": {
+      "type": "integer"
+    },
+    "hotel_terms": {
+      "type": "text"
+    },
+    "hotel_checkin": {
+      "type": "string"
+    },
+    "hotel_checkout": {
+      "type": "string"
+    },
+    "res_name": {
+      "type": "string"
+    },
+    "res_mobile": {
+      "type": "biginteger"
+    },
+    "res_alt_mobile": {
+      "type": "biginteger"
+    },
+    "res_email": {
+      "type": "email"
+    },
+    "res_website": {
+      "type": "string"
+    },
+    "res_gst_no": {
+      "type": "string"
+    },
+    "res_address_line1": {
+      "type": "string"
+    },
+    "res_address_line2": {
+      "type": "string"
+    },
+    "res_state": {
+      "type": "string"
+    },
+    "res_district": {
+      "type": "string"
+    },
+    "res_country": {
+      "type": "string"
+    },
+    "res_pincode": {
+      "type": "integer"
+    },
+    "hotel_logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

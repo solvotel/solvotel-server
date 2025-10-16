@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_booking_room_tokens",
+  "info": {
+    "displayName": "room_tokens",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "gst": {
+      "type": "decimal"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "hsn": {
+      "type": "string"
+    },
+    "room": {
+      "type": "string"
+    },
+    "days": {
+      "type": "integer"
+    },
+    "invoice": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

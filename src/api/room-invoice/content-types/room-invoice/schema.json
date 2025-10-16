@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "room_invoices",
+  "info": {
+    "singularName": "room-invoice",
+    "pluralName": "room-invoices",
+    "displayName": "room-invoice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "invoice_no": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_phone": {
+      "type": "string"
+    },
+    "customer_address": {
+      "type": "string"
+    },
+    "customer_gst": {
+      "type": "string"
+    },
+    "total_amount": {
+      "type": "decimal"
+    },
+    "tax": {
+      "type": "decimal"
+    },
+    "payable_amount": {
+      "type": "decimal"
+    },
+    "room_booking": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::room-booking.room-booking",
+      "inversedBy": "room_invoices"
+    },
+    "food_items": {
+      "type": "component",
+      "component": "booking.food-items",
+      "repeatable": true
+    },
+    "room_tokens": {
+      "type": "component",
+      "component": "booking.room-tokens",
+      "repeatable": true
+    },
+    "hotel_id": {
+      "type": "string"
+    },
+    "service_billing": {
+      "type": "component",
+      "component": "booking.room-tokens",
+      "repeatable": true
+    },
+    "mop": {
+      "type": "string"
+    }
+  }
+}

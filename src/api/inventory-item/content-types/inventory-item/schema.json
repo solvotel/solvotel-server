@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_items",
+  "info": {
+    "singularName": "inventory-item",
+    "pluralName": "inventory-items",
+    "displayName": "inventory-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "group": {
+      "type": "string"
+    },
+    "auditable": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "tax": {
+      "type": "decimal"
+    },
+    "unit": {
+      "type": "enumeration",
+      "enum": [
+        "Pcs",
+        "Kg",
+        "Gm",
+        "Lt",
+        "Ml"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inventory-category.inventory-category"
+    },
+    "inventory_purchases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::inventory-purchase.inventory-purchase",
+      "mappedBy": "inventory_item"
+    },
+    "inventory_sales": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::inventory-sale.inventory-sale",
+      "mappedBy": "inventory_item"
+    },
+    "hotel_id": {
+      "type": "string"
+    }
+  }
+}

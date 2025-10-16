@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "table_bookings",
+  "info": {
+    "singularName": "table-booking",
+    "pluralName": "table-bookings",
+    "displayName": "table-booking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "table_no": {
+      "type": "string"
+    },
+    "guest": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "hotel_id": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    }
+  }
+}

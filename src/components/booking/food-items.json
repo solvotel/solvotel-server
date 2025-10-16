@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_booking_food_items",
+  "info": {
+    "displayName": "food_items",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "gst": {
+      "type": "decimal"
+    },
+    "qty": {
+      "type": "integer"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "room": {
+      "type": "string"
+    },
+    "hsn": {
+      "type": "string"
+    },
+    "invoice": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

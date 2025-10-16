@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurant_invoices",
+  "info": {
+    "singularName": "restaurant-invoice",
+    "pluralName": "restaurant-invoices",
+    "displayName": "restaurant-invoice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "invoice_no": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_phone": {
+      "type": "string"
+    },
+    "customer_gst": {
+      "type": "string"
+    },
+    "customer_address": {
+      "type": "string"
+    },
+    "total_amount": {
+      "type": "decimal"
+    },
+    "tax": {
+      "type": "decimal"
+    },
+    "payable_amount": {
+      "type": "decimal"
+    },
+    "hotel_id": {
+      "type": "string"
+    },
+    "mop": {
+      "type": "string"
+    },
+    "menu_items": {
+      "type": "component",
+      "component": "restaurant.menu-items",
+      "repeatable": true
+    }
+  }
+}

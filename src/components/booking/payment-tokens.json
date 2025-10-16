@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_booking_payment_tokens",
+  "info": {
+    "displayName": "payment_tokens",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "remark": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

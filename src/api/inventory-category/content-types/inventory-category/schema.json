@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_categories",
+  "info": {
+    "singularName": "inventory-category",
+    "pluralName": "inventory-categories",
+    "displayName": "inventory-category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "hotel_id": {
+      "type": "string"
+    }
+  }
+}

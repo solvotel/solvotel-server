@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_sales",
+  "info": {
+    "singularName": "inventory-sale",
+    "pluralName": "inventory-sales",
+    "displayName": "inventory-sale"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order_id": {
+      "type": "string"
+    },
+    "invoice_no": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "inventory_item": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::inventory-item.inventory-item",
+      "inversedBy": "inventory_sales"
+    },
+    "qty": {
+      "type": "integer"
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "tax": {
+      "type": "decimal"
+    },
+    "hotel_id": {
+      "type": "string"
+    },
+    "total_price": {
+      "type": "biginteger"
+    }
+  }
+}

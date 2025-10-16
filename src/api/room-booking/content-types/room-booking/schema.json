@@ -1,0 +1,142 @@
+{
+  "kind": "collectionType",
+  "collectionName": "room_bookings",
+  "info": {
+    "singularName": "room-booking",
+    "pluralName": "room-bookings",
+    "displayName": "room-booking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "booking_id": {
+      "type": "string"
+    },
+    "booking_referance": {
+      "type": "string"
+    },
+    "reference_no": {
+      "type": "string"
+    },
+    "booking_status": {
+      "type": "enumeration",
+      "enum": [
+        "Confirmed",
+        "Blocked",
+        "Cancelled"
+      ]
+    },
+    "booking_type": {
+      "type": "enumeration",
+      "enum": [
+        "FIT",
+        "Group",
+        "Corporate",
+        "Corporate Group",
+        "Social Event",
+        "Other"
+      ]
+    },
+    "adult": {
+      "type": "integer"
+    },
+    "children": {
+      "type": "integer"
+    },
+    "checkin_date": {
+      "type": "date"
+    },
+    "checkout_date": {
+      "type": "date"
+    },
+    "checkin_time": {
+      "type": "string"
+    },
+    "checkout_time": {
+      "type": "string"
+    },
+    "meal_plan": {
+      "type": "enumeration",
+      "enum": [
+        "EP",
+        "AP",
+        "CP",
+        "MAP"
+      ]
+    },
+    "remarks": {
+      "type": "text"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "room_bookings"
+    },
+    "checked_in": {
+      "type": "boolean",
+      "default": false
+    },
+    "checked_out": {
+      "type": "boolean",
+      "default": false
+    },
+    "service_billing": {
+      "type": "component",
+      "component": "booking.room-tokens",
+      "repeatable": true
+    },
+    "payment_tokens": {
+      "type": "component",
+      "component": "booking.payment-tokens",
+      "repeatable": true
+    },
+    "total_amount": {
+      "type": "decimal"
+    },
+    "total_gst": {
+      "type": "decimal"
+    },
+    "total_payable": {
+      "type": "decimal"
+    },
+    "hotel_id": {
+      "type": "string"
+    },
+    "food_items": {
+      "type": "component",
+      "component": "booking.food-items",
+      "repeatable": true
+    },
+    "advance_payment": {
+      "type": "component",
+      "component": "booking.advance-payment",
+      "repeatable": false
+    },
+    "room_tokens": {
+      "type": "component",
+      "component": "booking.room-tokens",
+      "repeatable": true
+    },
+    "rooms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::room.room",
+      "mappedBy": "room_bookings"
+    },
+    "table_orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::table-order.table-order",
+      "mappedBy": "room_booking"
+    },
+    "room_invoices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::room-invoice.room-invoice",
+      "mappedBy": "room_booking"
+    }
+  }
+}

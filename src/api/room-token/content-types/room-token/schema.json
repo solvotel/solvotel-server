@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "room_tokens",
+  "info": {
+    "singularName": "room-token",
+    "pluralName": "room-tokens",
+    "displayName": "room-token"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "room_no": {
+      "type": "string"
+    },
+    "booking_status": {
+      "type": "string"
+    },
+    "checkin_date": {
+      "type": "date"
+    },
+    "checkout_date": {
+      "type": "date"
+    },
+    "hotel_id": {
+      "type": "string"
+    },
+    "tariff": {
+      "type": "integer"
+    },
+    "gst": {
+      "type": "decimal"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "category": {
+      "type": "string"
+    },
+    "days": {
+      "type": "integer"
+    }
+  }
+}

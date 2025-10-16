@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurant_menus",
+  "info": {
+    "singularName": "restaurant-menu",
+    "pluralName": "restaurant-menus",
+    "displayName": "restaurant-menu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "segment": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "item": {
+      "type": "string"
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "gst": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "store_code": {
+      "type": "string"
+    },
+    "ingredient_code": {
+      "type": "string"
+    },
+    "show_in_profile": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "is_special": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "discount_allowed": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "hotel_id": {
+      "type": "string"
+    },
+    "hsn": {
+      "type": "string"
+    }
+  }
+}

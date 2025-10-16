@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tables",
+  "info": {
+    "singularName": "table",
+    "pluralName": "tables",
+    "displayName": "table"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "table_no": {
+      "type": "string"
+    },
+    "hotel_id": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "kind": "collectionType",
+  "collectionName": "room_categories",
+  "info": {
+    "singularName": "room-category",
+    "pluralName": "room-categories",
+    "displayName": "room-category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "bed_type": {
+      "type": "string"
+    },
+    "tariff": {
+      "type": "decimal"
+    },
+    "gst": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "base_adults": {
+      "type": "integer"
+    },
+    "base_child": {
+      "type": "integer"
+    },
+    "max_adults": {
+      "type": "integer"
+    },
+    "max_child": {
+      "type": "integer"
+    },
+    "max_capacity": {
+      "type": "integer"
+    },
+    "extra_adult": {
+      "type": "integer"
+    },
+    "extra_child": {
+      "type": "integer"
+    },
+    "ep": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "ap": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "cp": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "cap": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "booking_engine": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "conference_room": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "active": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "rooms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::room.room",
+      "mappedBy": "category"
+    },
+    "hotel_id": {
+      "type": "string"
+    },
+    "hsn": {
+      "type": "string"
+    }
+  }
+}

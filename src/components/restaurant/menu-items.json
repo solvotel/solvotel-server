@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_restaurant_menu_items",
+  "info": {
+    "displayName": "menu_items",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    },
+    "hsn": {
+      "type": "string"
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "qty": {
+      "type": "integer"
+    },
+    "gst": {
+      "type": "decimal"
+    },
+    "invoice": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}
