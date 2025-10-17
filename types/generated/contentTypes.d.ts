@@ -1036,6 +1036,7 @@ export interface ApiTableBookingTableBooking
       'api::table-booking.table-booking'
     > &
       Schema.Attribute.Private;
+    note: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     table_no: Schema.Attribute.String;
     time: Schema.Attribute.String;
