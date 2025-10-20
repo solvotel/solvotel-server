@@ -137,6 +137,12 @@
       "relation": "oneToMany",
       "target": "api::room-invoice.room-invoice",
       "mappedBy": "room_booking"
+    },
+    "service_tokens": {
+      "type": "json"
+    },
+    "food_tokens": {
+      "type": "json"
     }
   }
 }
