@@ -420,6 +420,31 @@ export interface ApiCustomerCustomer extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiDemoDemo extends Struct.CollectionTypeSchema {
+  collectionName: 'demos';
+  info: {
+    displayName: 'demo';
+    pluralName: 'demos';
+    singularName: 'demo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::demo.demo'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiExpenseExpense extends Struct.CollectionTypeSchema {
   collectionName: 'expenses';
   info: {
@@ -1643,6 +1668,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::customer.customer': ApiCustomerCustomer;
+      'api::demo.demo': ApiDemoDemo;
       'api::expense.expense': ApiExpenseExpense;
       'api::hotel.hotel': ApiHotelHotel;
       'api::inventory-category.inventory-category': ApiInventoryCategoryInventoryCategory;
