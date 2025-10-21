@@ -810,7 +810,6 @@ export interface ApiRoomBookingRoomBooking extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     customer: Schema.Attribute.Relation<'manyToOne', 'api::customer.customer'>;
-    food_items: Schema.Attribute.Component<'booking.food-items', true>;
     food_tokens: Schema.Attribute.JSON;
     hotel_id: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -830,7 +829,6 @@ export interface ApiRoomBookingRoomBooking extends Struct.CollectionTypeSchema {
     >;
     room_tokens: Schema.Attribute.Component<'booking.room-tokens', true>;
     rooms: Schema.Attribute.Relation<'manyToMany', 'api::room.room'>;
-    service_billing: Schema.Attribute.Component<'booking.room-tokens', true>;
     service_tokens: Schema.Attribute.JSON;
     table_orders: Schema.Attribute.Relation<
       'oneToMany',
@@ -915,7 +913,7 @@ export interface ApiRoomInvoiceRoomInvoice extends Struct.CollectionTypeSchema {
     customer_name: Schema.Attribute.String;
     customer_phone: Schema.Attribute.String;
     date: Schema.Attribute.Date;
-    food_items: Schema.Attribute.Component<'booking.food-items', true>;
+    food_tokens: Schema.Attribute.JSON;
     hotel_id: Schema.Attribute.String;
     invoice_no: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -932,7 +930,7 @@ export interface ApiRoomInvoiceRoomInvoice extends Struct.CollectionTypeSchema {
       'api::room-booking.room-booking'
     >;
     room_tokens: Schema.Attribute.Component<'booking.room-tokens', true>;
-    service_billing: Schema.Attribute.Component<'booking.room-tokens', true>;
+    service_tokens: Schema.Attribute.JSON;
     tax: Schema.Attribute.Decimal;
     time: Schema.Attribute.String;
     total_amount: Schema.Attribute.Decimal;

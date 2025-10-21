@@ -47,11 +47,6 @@
       "target": "api::room-booking.room-booking",
       "inversedBy": "room_invoices"
     },
-    "food_items": {
-      "type": "component",
-      "component": "booking.food-items",
-      "repeatable": true
-    },
     "room_tokens": {
       "type": "component",
       "component": "booking.room-tokens",
@@ -60,13 +55,14 @@
     "hotel_id": {
       "type": "string"
     },
-    "service_billing": {
-      "type": "component",
-      "component": "booking.room-tokens",
-      "repeatable": true
-    },
     "mop": {
       "type": "string"
+    },
+    "service_tokens": {
+      "type": "json"
+    },
+    "food_tokens": {
+      "type": "json"
     }
   }
 }

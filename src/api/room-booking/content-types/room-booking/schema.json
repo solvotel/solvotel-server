@@ -83,11 +83,6 @@
       "type": "boolean",
       "default": false
     },
-    "service_billing": {
-      "type": "component",
-      "component": "booking.room-tokens",
-      "repeatable": true
-    },
     "payment_tokens": {
       "type": "component",
       "component": "booking.payment-tokens",
@@ -104,11 +99,6 @@
     },
     "hotel_id": {
       "type": "string"
-    },
-    "food_items": {
-      "type": "component",
-      "component": "booking.food-items",
-      "repeatable": true
     },
     "advance_payment": {
       "type": "component",
