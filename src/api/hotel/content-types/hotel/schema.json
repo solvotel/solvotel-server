@@ -98,6 +98,12 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "hotel_footer": {
+      "type": "text"
+    },
+    "res_footer": {
+      "type": "text"
     }
   }
 }

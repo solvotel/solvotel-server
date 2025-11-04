@@ -500,6 +500,7 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
     hotel_country: Schema.Attribute.String;
     hotel_district: Schema.Attribute.String;
     hotel_email: Schema.Attribute.Email;
+    hotel_footer: Schema.Attribute.Text;
     hotel_gst_no: Schema.Attribute.String;
     hotel_logo: Schema.Attribute.Media<'images'>;
     hotel_mobile: Schema.Attribute.BigInteger;
@@ -518,6 +519,7 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
     res_country: Schema.Attribute.String;
     res_district: Schema.Attribute.String;
     res_email: Schema.Attribute.Email;
+    res_footer: Schema.Attribute.Text;
     res_gst_no: Schema.Attribute.String;
     res_mobile: Schema.Attribute.BigInteger;
     res_name: Schema.Attribute.String;
