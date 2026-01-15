@@ -51,6 +51,12 @@
       "type": "component",
       "component": "restaurant.menu-items",
       "repeatable": true
+    },
+    "user_created": {
+      "type": "string"
+    },
+    "user_updated": {
+      "type": "string"
     }
   }
 }

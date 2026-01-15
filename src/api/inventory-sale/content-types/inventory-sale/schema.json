@@ -40,6 +40,12 @@
     },
     "total_price": {
       "type": "biginteger"
+    },
+    "user_created": {
+      "type": "string"
+    },
+    "user_updated": {
+      "type": "string"
     }
   }
 }

@@ -475,6 +475,8 @@ export interface ApiExpenseExpense extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -559,6 +561,8 @@ export interface ApiInventoryCategoryInventoryCategory
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -606,6 +610,8 @@ export interface ApiInventoryItemInventoryItem
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -646,6 +652,8 @@ export interface ApiInventoryPurchaseInventoryPurchase
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -686,6 +694,8 @@ export interface ApiInventorySaleInventorySale
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -716,6 +726,49 @@ export interface ApiPaymentMethodPaymentMethod
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
+  };
+}
+
+export interface ApiPosOutletPosOutlet extends Struct.CollectionTypeSchema {
+  collectionName: 'pos_outlets';
+  info: {
+    displayName: 'pos-outlet';
+    pluralName: 'pos-outlets';
+    singularName: 'pos-outlet';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    address_line_1: Schema.Attribute.String;
+    address_line_2: Schema.Attribute.String;
+    alt_phone: Schema.Attribute.String;
+    country: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    district: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    footer: Schema.Attribute.Text;
+    gst_no: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pos-outlet.pos-outlet'
+    > &
+      Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images', true>;
+    name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    pincode: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    state: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    website: Schema.Attribute.String;
   };
 }
 
@@ -757,6 +810,8 @@ export interface ApiRestaurantInvoiceRestaurantInvoice
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -799,6 +854,8 @@ export interface ApiRestaurantMenuRestaurantMenu
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -867,6 +924,8 @@ export interface ApiRoomBookingRoomBooking extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -918,6 +977,8 @@ export interface ApiRoomCategoryRoomCategory
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -964,6 +1025,8 @@ export interface ApiRoomInvoiceRoomInvoice extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -1001,6 +1064,8 @@ export interface ApiRoomTokenRoomToken extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -1036,6 +1101,8 @@ export interface ApiRoomRoom extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -1070,6 +1137,8 @@ export interface ApiTableBookingTableBooking
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -1117,6 +1186,8 @@ export interface ApiTableOrderTableOrder extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -1143,6 +1214,8 @@ export interface ApiTableTable extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -1640,6 +1713,12 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    permissions: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        ['read', 'write', 'update', 'delete']
+      > &
+      Schema.Attribute.DefaultTo<'["read"]'>;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1678,6 +1757,7 @@ declare module '@strapi/strapi' {
       'api::inventory-purchase.inventory-purchase': ApiInventoryPurchaseInventoryPurchase;
       'api::inventory-sale.inventory-sale': ApiInventorySaleInventorySale;
       'api::payment-method.payment-method': ApiPaymentMethodPaymentMethod;
+      'api::pos-outlet.pos-outlet': ApiPosOutletPosOutlet;
       'api::restaurant-invoice.restaurant-invoice': ApiRestaurantInvoiceRestaurantInvoice;
       'api::restaurant-menu.restaurant-menu': ApiRestaurantMenuRestaurantMenu;
       'api::room-booking.room-booking': ApiRoomBookingRoomBooking;

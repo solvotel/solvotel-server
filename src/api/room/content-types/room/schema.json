@@ -31,6 +31,12 @@
       "relation": "manyToMany",
       "target": "api::room-booking.room-booking",
       "inversedBy": "rooms"
+    },
+    "user_created": {
+      "type": "string"
+    },
+    "user_updated": {
+      "type": "string"
     }
   }
 }

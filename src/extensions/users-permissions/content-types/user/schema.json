@@ -82,6 +82,17 @@
         "inventory",
         "accounts"
       ]
+    },
+    "permissions": {
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "default": "[\"read\"]",
+      "options": [
+        "read",
+        "write",
+        "update",
+        "delete"
+      ]
     }
   }
 }

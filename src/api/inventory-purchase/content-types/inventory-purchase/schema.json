@@ -40,6 +40,12 @@
     },
     "date": {
       "type": "date"
+    },
+    "user_created": {
+      "type": "string"
+    },
+    "user_updated": {
+      "type": "string"
     }
   }
 }

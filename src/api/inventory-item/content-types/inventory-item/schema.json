@@ -59,6 +59,12 @@
     },
     "hotel_id": {
       "type": "string"
+    },
+    "user_created": {
+      "type": "string"
+    },
+    "user_updated": {
+      "type": "string"
     }
   }
 }
