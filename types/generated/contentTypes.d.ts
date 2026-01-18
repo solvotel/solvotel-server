@@ -792,6 +792,7 @@ export interface ApiRestaurantInvoiceRestaurantInvoice
     customer_name: Schema.Attribute.String;
     customer_phone: Schema.Attribute.String;
     date: Schema.Attribute.Date;
+    due: Schema.Attribute.Decimal;
     hotel_id: Schema.Attribute.String;
     invoice_no: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -803,6 +804,7 @@ export interface ApiRestaurantInvoiceRestaurantInvoice
     menu_items: Schema.Attribute.Component<'restaurant.menu-items', true>;
     mop: Schema.Attribute.String;
     payable_amount: Schema.Attribute.Decimal;
+    payments: Schema.Attribute.Component<'common.payments', true>;
     publishedAt: Schema.Attribute.DateTime;
     tax: Schema.Attribute.Decimal;
     time: Schema.Attribute.String;
@@ -1001,6 +1003,7 @@ export interface ApiRoomInvoiceRoomInvoice extends Struct.CollectionTypeSchema {
     customer_name: Schema.Attribute.String;
     customer_phone: Schema.Attribute.String;
     date: Schema.Attribute.Date;
+    due: Schema.Attribute.Decimal;
     food_tokens: Schema.Attribute.JSON;
     hotel_id: Schema.Attribute.String;
     invoice_no: Schema.Attribute.String;
@@ -1012,6 +1015,7 @@ export interface ApiRoomInvoiceRoomInvoice extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     mop: Schema.Attribute.String;
     payable_amount: Schema.Attribute.Decimal;
+    payments: Schema.Attribute.Component<'common.payments', true>;
     publishedAt: Schema.Attribute.DateTime;
     room_booking: Schema.Attribute.Relation<
       'manyToOne',
@@ -1162,6 +1166,7 @@ export interface ApiTableOrderTableOrder extends Struct.CollectionTypeSchema {
     date: Schema.Attribute.Date;
     food_items: Schema.Attribute.Component<'booking.food-items', true>;
     hotel_id: Schema.Attribute.String;
+    kot_items: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_common_payments",
+  "info": {
+    "displayName": "payments",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "time_stamp": {
+      "type": "string"
+    },
+    "mop": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal"
+    }
+  },
+  "config": {}
+}

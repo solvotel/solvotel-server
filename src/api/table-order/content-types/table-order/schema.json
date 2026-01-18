@@ -97,6 +97,9 @@
     },
     "user_updated": {
       "type": "string"
+    },
+    "kot_items": {
+      "type": "json"
     }
   }
 }

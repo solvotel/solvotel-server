@@ -64,6 +64,19 @@ export interface BookingRoomTokens extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonPayments extends Struct.ComponentSchema {
+  collectionName: 'components_common_payments';
+  info: {
+    displayName: 'payments';
+    icon: 'apps';
+  };
+  attributes: {
+    amount: Schema.Attribute.Decimal;
+    mop: Schema.Attribute.String;
+    time_stamp: Schema.Attribute.String;
+  };
+}
+
 export interface RestaurantMenuItems extends Struct.ComponentSchema {
   collectionName: 'components_restaurant_menu_items';
   info: {
@@ -88,6 +101,7 @@ declare module '@strapi/strapi' {
       'booking.food-items': BookingFoodItems;
       'booking.payment-tokens': BookingPaymentTokens;
       'booking.room-tokens': BookingRoomTokens;
+      'common.payments': CommonPayments;
       'restaurant.menu-items': RestaurantMenuItems;
     }
   }

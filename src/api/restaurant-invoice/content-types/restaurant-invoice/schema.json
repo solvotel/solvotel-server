@@ -57,6 +57,14 @@
     },
     "user_updated": {
       "type": "string"
+    },
+    "payments": {
+      "type": "component",
+      "component": "common.payments",
+      "repeatable": true
+    },
+    "due": {
+      "type": "decimal"
     }
   }
 }
