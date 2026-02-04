@@ -30,6 +30,12 @@
     "invoice": {
       "type": "boolean",
       "default": false
+    },
+    "in_date": {
+      "type": "date"
+    },
+    "out_date": {
+      "type": "date"
     }
   },
   "config": {}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pos_payment_methods",
+  "info": {
+    "singularName": "pos-payment-method",
+    "pluralName": "pos-payment-methods",
+    "displayName": "pos-payment-method"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "user_created": {
+      "type": "string"
+    },
+    "user_updated": {
+      "type": "string"
+    },
+    "pos_outlet_id": {
+      "type": "string"
+    }
+  }
+}

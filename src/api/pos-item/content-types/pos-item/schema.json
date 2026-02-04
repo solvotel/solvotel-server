@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pos_items",
+  "info": {
+    "singularName": "pos-item",
+    "pluralName": "pos-items",
+    "displayName": "pos-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "segment": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "item": {
+      "type": "string"
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "cgst": {
+      "type": "decimal"
+    },
+    "sgst": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "hsn": {
+      "type": "string"
+    },
+    "user_created": {
+      "type": "string"
+    },
+    "user_updated": {
+      "type": "string"
+    },
+    "pos_outlet_id": {
+      "type": "string"
+    }
+  }
+}

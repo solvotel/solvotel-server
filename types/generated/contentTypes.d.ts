@@ -731,6 +731,85 @@ export interface ApiPaymentMethodPaymentMethod
   };
 }
 
+export interface ApiPosItemPosItem extends Struct.CollectionTypeSchema {
+  collectionName: 'pos_items';
+  info: {
+    displayName: 'pos-item';
+    pluralName: 'pos-items';
+    singularName: 'pos-item';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.String;
+    cgst: Schema.Attribute.Decimal;
+    code: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hsn: Schema.Attribute.String;
+    item: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pos-item.pos-item'
+    > &
+      Schema.Attribute.Private;
+    pos_outlet_id: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    rate: Schema.Attribute.Decimal;
+    segment: Schema.Attribute.String;
+    sgst: Schema.Attribute.Decimal;
+    total: Schema.Attribute.Decimal;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
+  };
+}
+
+export interface ApiPosOutletInvoicePosOutletInvoice
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'pos_outlet_invoices';
+  info: {
+    displayName: 'pos-outlet-invoice';
+    pluralName: 'pos-outlet-invoices';
+    singularName: 'pos-outlet-invoice';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    billing_items: Schema.Attribute.Component<'pos.billing-items', true>;
+    cgst: Schema.Attribute.Decimal;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    customer_address: Schema.Attribute.String;
+    customer_gst: Schema.Attribute.String;
+    customer_name: Schema.Attribute.String;
+    customer_phone: Schema.Attribute.String;
+    date: Schema.Attribute.Date;
+    invoice_no: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pos-outlet-invoice.pos-outlet-invoice'
+    > &
+      Schema.Attribute.Private;
+    payable: Schema.Attribute.Decimal;
+    publishedAt: Schema.Attribute.DateTime;
+    sgst: Schema.Attribute.Decimal;
+    taxable: Schema.Attribute.Decimal;
+    time: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPosOutletPosOutlet extends Struct.CollectionTypeSchema {
   collectionName: 'pos_outlets';
   info: {
@@ -753,6 +832,7 @@ export interface ApiPosOutletPosOutlet extends Struct.CollectionTypeSchema {
     email: Schema.Attribute.String;
     footer: Schema.Attribute.Text;
     gst_no: Schema.Attribute.String;
+    hotel_id: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -768,7 +848,41 @@ export interface ApiPosOutletPosOutlet extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
     website: Schema.Attribute.String;
+  };
+}
+
+export interface ApiPosPaymentMethodPosPaymentMethod
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'pos_payment_methods';
+  info: {
+    displayName: 'pos-payment-method';
+    pluralName: 'pos-payment-methods';
+    singularName: 'pos-payment-method';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pos-payment-method.pos-payment-method'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    pos_outlet_id: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
@@ -1724,6 +1838,7 @@ export interface PluginUsersPermissionsUser
         ['read', 'write', 'update', 'delete']
       > &
       Schema.Attribute.DefaultTo<'["read"]'>;
+    pos_outlet_id: Schema.Attribute.String;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1762,7 +1877,10 @@ declare module '@strapi/strapi' {
       'api::inventory-purchase.inventory-purchase': ApiInventoryPurchaseInventoryPurchase;
       'api::inventory-sale.inventory-sale': ApiInventorySaleInventorySale;
       'api::payment-method.payment-method': ApiPaymentMethodPaymentMethod;
+      'api::pos-item.pos-item': ApiPosItemPosItem;
+      'api::pos-outlet-invoice.pos-outlet-invoice': ApiPosOutletInvoicePosOutletInvoice;
       'api::pos-outlet.pos-outlet': ApiPosOutletPosOutlet;
+      'api::pos-payment-method.pos-payment-method': ApiPosPaymentMethodPosPaymentMethod;
       'api::restaurant-invoice.restaurant-invoice': ApiRestaurantInvoiceRestaurantInvoice;
       'api::restaurant-menu.restaurant-menu': ApiRestaurantMenuRestaurantMenu;
       'api::room-booking.room-booking': ApiRoomBookingRoomBooking;

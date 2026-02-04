@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_pos_payments",
+  "info": {
+    "displayName": "payments",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {},
+  "config": {}
+}

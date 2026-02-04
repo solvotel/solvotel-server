@@ -57,8 +57,10 @@ export interface BookingRoomTokens extends Struct.ComponentSchema {
     days: Schema.Attribute.Integer;
     gst: Schema.Attribute.Decimal;
     hsn: Schema.Attribute.String;
+    in_date: Schema.Attribute.Date;
     invoice: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     item: Schema.Attribute.String;
+    out_date: Schema.Attribute.Date;
     rate: Schema.Attribute.Decimal;
     room: Schema.Attribute.String;
   };
@@ -75,6 +77,32 @@ export interface CommonPayments extends Struct.ComponentSchema {
     mop: Schema.Attribute.String;
     time_stamp: Schema.Attribute.String;
   };
+}
+
+export interface PosBillingItems extends Struct.ComponentSchema {
+  collectionName: 'components_pos_billing_items';
+  info: {
+    displayName: 'billing_items';
+    icon: 'bold';
+  };
+  attributes: {
+    cgst: Schema.Attribute.Decimal;
+    hsn: Schema.Attribute.String;
+    item: Schema.Attribute.String;
+    qty: Schema.Attribute.Integer;
+    rate: Schema.Attribute.Decimal;
+    sgst: Schema.Attribute.Decimal;
+    total: Schema.Attribute.Decimal;
+  };
+}
+
+export interface PosPayments extends Struct.ComponentSchema {
+  collectionName: 'components_pos_payments';
+  info: {
+    displayName: 'payments';
+    icon: 'attachment';
+  };
+  attributes: {};
 }
 
 export interface RestaurantMenuItems extends Struct.ComponentSchema {
@@ -102,6 +130,8 @@ declare module '@strapi/strapi' {
       'booking.payment-tokens': BookingPaymentTokens;
       'booking.room-tokens': BookingRoomTokens;
       'common.payments': CommonPayments;
+      'pos.billing-items': PosBillingItems;
+      'pos.payments': PosPayments;
       'restaurant.menu-items': RestaurantMenuItems;
     }
   }

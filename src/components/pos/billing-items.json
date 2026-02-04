@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_pos_billing_items",
+  "info": {
+    "displayName": "billing_items",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    },
+    "hsn": {
+      "type": "string"
+    },
+    "cgst": {
+      "type": "decimal"
+    },
+    "sgst": {
+      "type": "decimal"
+    },
+    "qty": {
+      "type": "integer"
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    }
+  },
+  "config": {}
+}

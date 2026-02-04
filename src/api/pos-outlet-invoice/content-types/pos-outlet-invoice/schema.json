@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pos_outlet_invoices",
+  "info": {
+    "singularName": "pos-outlet-invoice",
+    "pluralName": "pos-outlet-invoices",
+    "displayName": "pos-outlet-invoice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "invoice_no": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_phone": {
+      "type": "string"
+    },
+    "customer_gst": {
+      "type": "string"
+    },
+    "customer_address": {
+      "type": "string"
+    },
+    "taxable": {
+      "type": "decimal"
+    },
+    "cgst": {
+      "type": "decimal"
+    },
+    "sgst": {
+      "type": "decimal"
+    },
+    "payable": {
+      "type": "decimal"
+    },
+    "billing_items": {
+      "type": "component",
+      "component": "pos.billing-items",
+      "repeatable": true
+    }
+  }
+}

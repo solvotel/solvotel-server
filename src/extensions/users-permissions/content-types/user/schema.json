@@ -93,6 +93,9 @@
         "update",
         "delete"
       ]
+    },
+    "pos_outlet_id": {
+      "type": "string"
     }
   }
 }
