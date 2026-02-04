@@ -800,6 +800,7 @@ export interface ApiPosOutletInvoicePosOutletInvoice
     > &
       Schema.Attribute.Private;
     payable: Schema.Attribute.Decimal;
+    pos_outlet_id: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     sgst: Schema.Attribute.Decimal;
     taxable: Schema.Attribute.Decimal;
@@ -807,6 +808,8 @@ export interface ApiPosOutletInvoicePosOutletInvoice
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
   };
 }
 
