@@ -62,6 +62,9 @@
       "type": "component",
       "component": "common.payments",
       "repeatable": true
+    },
+    "due": {
+      "type": "decimal"
     }
   }
 }

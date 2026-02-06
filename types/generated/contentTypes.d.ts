@@ -792,6 +792,7 @@ export interface ApiPosOutletInvoicePosOutletInvoice
     customer_name: Schema.Attribute.String;
     customer_phone: Schema.Attribute.String;
     date: Schema.Attribute.Date;
+    due: Schema.Attribute.Decimal;
     invoice_no: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
