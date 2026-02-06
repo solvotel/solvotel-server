@@ -57,6 +57,11 @@
     },
     "user_created": {
       "type": "string"
+    },
+    "payments": {
+      "type": "component",
+      "component": "common.payments",
+      "repeatable": true
     }
   }
 }

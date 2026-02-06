@@ -800,6 +800,7 @@ export interface ApiPosOutletInvoicePosOutletInvoice
     > &
       Schema.Attribute.Private;
     payable: Schema.Attribute.Decimal;
+    payments: Schema.Attribute.Component<'common.payments', true>;
     pos_outlet_id: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     sgst: Schema.Attribute.Decimal;
