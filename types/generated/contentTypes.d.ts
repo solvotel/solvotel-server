@@ -844,7 +844,7 @@ export interface ApiPosOutletPosOutlet extends Struct.CollectionTypeSchema {
       'api::pos-outlet.pos-outlet'
     > &
       Schema.Attribute.Private;
-    logo: Schema.Attribute.Media<'images', true>;
+    logo: Schema.Attribute.Media<'images'>;
     name: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     pincode: Schema.Attribute.String;
