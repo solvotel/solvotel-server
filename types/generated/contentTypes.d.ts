@@ -699,6 +699,37 @@ export interface ApiInventorySaleInventorySale
   };
 }
 
+export interface ApiKotKot extends Struct.CollectionTypeSchema {
+  collectionName: 'kots';
+  info: {
+    displayName: 'kot';
+    pluralName: 'kots';
+    singularName: 'kot';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    items: Schema.Attribute.JSON;
+    kot_number: Schema.Attribute.Integer;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::kot.kot'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    table_order: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::table-order.table-order'
+    >;
+    type: Schema.Attribute.Enumeration<['new', 'update', 'cancel']>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPaymentMethodPaymentMethod
   extends Struct.CollectionTypeSchema {
   collectionName: 'payment_methods';
@@ -1286,6 +1317,7 @@ export interface ApiTableOrderTableOrder extends Struct.CollectionTypeSchema {
     food_items: Schema.Attribute.Component<'booking.food-items', true>;
     hotel_id: Schema.Attribute.String;
     kot_items: Schema.Attribute.JSON;
+    kots: Schema.Attribute.Relation<'oneToMany', 'api::kot.kot'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1881,6 +1913,7 @@ declare module '@strapi/strapi' {
       'api::inventory-item.inventory-item': ApiInventoryItemInventoryItem;
       'api::inventory-purchase.inventory-purchase': ApiInventoryPurchaseInventoryPurchase;
       'api::inventory-sale.inventory-sale': ApiInventorySaleInventorySale;
+      'api::kot.kot': ApiKotKot;
       'api::payment-method.payment-method': ApiPaymentMethodPaymentMethod;
       'api::pos-item.pos-item': ApiPosItemPosItem;
       'api::pos-outlet-invoice.pos-outlet-invoice': ApiPosOutletInvoicePosOutletInvoice;

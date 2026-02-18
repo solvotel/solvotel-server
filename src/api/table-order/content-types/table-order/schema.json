@@ -100,6 +100,12 @@
     },
     "kot_items": {
       "type": "json"
+    },
+    "kots": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kot.kot",
+      "mappedBy": "table_order"
     }
   }
 }

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kots",
+  "info": {
+    "singularName": "kot",
+    "pluralName": "kots",
+    "displayName": "kot"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kot_number": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "json"
+    },
+    "table_order": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::table-order.table-order",
+      "inversedBy": "kots"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "update",
+        "cancel"
+      ]
+    }
+  }
+}
