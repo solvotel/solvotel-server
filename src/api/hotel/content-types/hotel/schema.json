@@ -104,6 +104,18 @@
     },
     "res_footer": {
       "type": "text"
+    },
+    "hotel_upi_id": {
+      "type": "string"
+    },
+    "hotel_upi_name": {
+      "type": "string"
+    },
+    "res_upi_id": {
+      "type": "string"
+    },
+    "res_upi_name": {
+      "type": "string"
     }
   }
 }

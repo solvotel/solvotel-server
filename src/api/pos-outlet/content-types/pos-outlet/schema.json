@@ -65,6 +65,12 @@
     },
     "user_updated": {
       "type": "string"
+    },
+    "upi_id": {
+      "type": "string"
+    },
+    "upi_name": {
+      "type": "string"
     }
   }
 }

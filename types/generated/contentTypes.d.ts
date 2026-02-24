@@ -510,6 +510,8 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
     hotel_pincode: Schema.Attribute.Integer;
     hotel_state: Schema.Attribute.String;
     hotel_terms: Schema.Attribute.Text;
+    hotel_upi_id: Schema.Attribute.String;
+    hotel_upi_name: Schema.Attribute.String;
     hotel_website: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::hotel.hotel'> &
@@ -527,6 +529,8 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
     res_name: Schema.Attribute.String;
     res_pincode: Schema.Attribute.Integer;
     res_state: Schema.Attribute.String;
+    res_upi_id: Schema.Attribute.String;
+    res_upi_name: Schema.Attribute.String;
     res_website: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -884,6 +888,8 @@ export interface ApiPosOutletPosOutlet extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    upi_id: Schema.Attribute.String;
+    upi_name: Schema.Attribute.String;
     user_created: Schema.Attribute.String;
     user_updated: Schema.Attribute.String;
     website: Schema.Attribute.String;
