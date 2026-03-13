@@ -74,6 +74,7 @@
       "customField": "plugin::multi-select.multi-select",
       "default": "[]",
       "options": [
+        "all",
         "admin",
         "frontoffice",
         "property",
@@ -88,6 +89,7 @@
       "customField": "plugin::multi-select.multi-select",
       "default": "[\"read\"]",
       "options": [
+        "all",
         "read",
         "write",
         "update",
