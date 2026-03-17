@@ -698,6 +698,7 @@ export interface ApiKotKot extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::kot.kot'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    table_no: Schema.Attribute.String;
     table_order: Schema.Attribute.Relation<
       'manyToOne',
       'api::table-order.table-order'

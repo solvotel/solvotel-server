@@ -30,6 +30,9 @@
         "update",
         "cancel"
       ]
+    },
+    "table_no": {
+      "type": "string"
     }
   }
 }
