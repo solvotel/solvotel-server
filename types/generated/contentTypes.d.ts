@@ -1045,7 +1045,7 @@ export interface ApiRoomBookingRoomBooking extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::room-invoice.room-invoice'
     >;
-    room_tokens: Schema.Attribute.Component<'booking.room-tokens', true>;
+    room_tokens: Schema.Attribute.JSON;
     rooms: Schema.Attribute.Relation<'manyToMany', 'api::room.room'>;
     service_tokens: Schema.Attribute.JSON;
     table_orders: Schema.Attribute.Relation<
@@ -1153,7 +1153,7 @@ export interface ApiRoomInvoiceRoomInvoice extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::room-booking.room-booking'
     >;
-    room_tokens: Schema.Attribute.Component<'booking.room-tokens', true>;
+    room_tokens: Schema.Attribute.JSON;
     service_tokens: Schema.Attribute.JSON;
     tax: Schema.Attribute.Decimal;
     time: Schema.Attribute.String;
@@ -1318,6 +1318,7 @@ export interface ApiTableOrderTableOrder extends Struct.CollectionTypeSchema {
     >;
     room_no: Schema.Attribute.String;
     table: Schema.Attribute.Relation<'oneToOne', 'api::table.table'>;
+    temp_room_no: Schema.Attribute.String;
     time: Schema.Attribute.String;
     token_status: Schema.Attribute.Enumeration<['Open', 'Closed']> &
       Schema.Attribute.DefaultTo<'Open'>;

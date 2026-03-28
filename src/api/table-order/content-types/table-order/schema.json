@@ -106,6 +106,9 @@
       "relation": "oneToMany",
       "target": "api::kot.kot",
       "mappedBy": "table_order"
+    },
+    "temp_room_no": {
+      "type": "string"
     }
   }
 }

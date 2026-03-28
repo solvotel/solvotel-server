@@ -47,11 +47,6 @@
       "target": "api::room-booking.room-booking",
       "inversedBy": "room_invoices"
     },
-    "room_tokens": {
-      "type": "component",
-      "component": "booking.room-tokens",
-      "repeatable": true
-    },
     "hotel_id": {
       "type": "string"
     },
@@ -77,6 +72,9 @@
     },
     "due": {
       "type": "decimal"
+    },
+    "room_tokens": {
+      "type": "json"
     }
   }
 }
