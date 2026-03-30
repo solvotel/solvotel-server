@@ -64,6 +64,12 @@
     },
     "address": {
       "type": "text"
+    },
+    "user_created": {
+      "type": "string"
+    },
+    "user_updated": {
+      "type": "string"
     }
   }
 }

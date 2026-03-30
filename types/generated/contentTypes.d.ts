@@ -414,6 +414,8 @@ export interface ApiCustomerCustomer extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_created: Schema.Attribute.String;
+    user_updated: Schema.Attribute.String;
     visa_exp_date: Schema.Attribute.Date;
     visa_issue_date: Schema.Attribute.Date;
     visa_number: Schema.Attribute.String;
