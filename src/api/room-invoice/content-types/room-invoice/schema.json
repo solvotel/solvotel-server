@@ -75,6 +75,12 @@
     },
     "room_tokens": {
       "type": "json"
+    },
+    "checkin_date": {
+      "type": "string"
+    },
+    "checkout_date": {
+      "type": "string"
     }
   }
 }

@@ -100,11 +100,6 @@
     "hotel_id": {
       "type": "string"
     },
-    "advance_payment": {
-      "type": "component",
-      "component": "booking.advance-payment",
-      "repeatable": false
-    },
     "rooms": {
       "type": "relation",
       "relation": "manyToMany",
@@ -136,6 +131,9 @@
       "type": "string"
     },
     "room_tokens": {
+      "type": "json"
+    },
+    "advance_payment": {
       "type": "json"
     }
   }

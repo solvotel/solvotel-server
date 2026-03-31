@@ -1007,10 +1007,7 @@ export interface ApiRoomBookingRoomBooking extends Struct.CollectionTypeSchema {
   };
   attributes: {
     adult: Schema.Attribute.Integer;
-    advance_payment: Schema.Attribute.Component<
-      'booking.advance-payment',
-      false
-    >;
+    advance_payment: Schema.Attribute.JSON;
     booking_id: Schema.Attribute.String;
     booking_referance: Schema.Attribute.String;
     booking_status: Schema.Attribute.Enumeration<
@@ -1129,6 +1126,8 @@ export interface ApiRoomInvoiceRoomInvoice extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    checkin_date: Schema.Attribute.String;
+    checkout_date: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
