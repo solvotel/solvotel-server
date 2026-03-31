@@ -587,7 +587,7 @@ export interface ApiInventoryItemInventoryItem
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     tax: Schema.Attribute.Decimal;
-    unit: Schema.Attribute.Enumeration<['Pcs', 'Kg', 'Gm', 'Lt', 'Ml']>;
+    unit: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

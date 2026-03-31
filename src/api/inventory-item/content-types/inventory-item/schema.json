@@ -30,16 +30,6 @@
     "tax": {
       "type": "decimal"
     },
-    "unit": {
-      "type": "enumeration",
-      "enum": [
-        "Pcs",
-        "Kg",
-        "Gm",
-        "Lt",
-        "Ml"
-      ]
-    },
     "category": {
       "type": "relation",
       "relation": "oneToOne",
@@ -64,6 +54,9 @@
       "type": "string"
     },
     "user_updated": {
+      "type": "string"
+    },
+    "unit": {
       "type": "string"
     }
   }
