@@ -671,7 +671,7 @@ export interface ApiInventorySaleInventorySale
     qty: Schema.Attribute.Integer;
     rate: Schema.Attribute.Decimal;
     tax: Schema.Attribute.Decimal;
-    total_price: Schema.Attribute.BigInteger;
+    total_price: Schema.Attribute.Decimal;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

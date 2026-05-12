@@ -39,7 +39,7 @@
       "type": "string"
     },
     "total_price": {
-      "type": "biginteger"
+      "type": "decimal"
     },
     "user_created": {
       "type": "string"
