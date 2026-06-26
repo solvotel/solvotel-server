@@ -6,9 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "date": {
-      "type": "date"
-    },
     "amount": {
       "type": "decimal"
     },
@@ -16,6 +13,9 @@
       "type": "string"
     },
     "remark": {
+      "type": "string"
+    },
+    "date": {
       "type": "string"
     }
   },

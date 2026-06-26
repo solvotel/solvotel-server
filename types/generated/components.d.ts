@@ -40,7 +40,7 @@ export interface BookingPaymentTokens extends Struct.ComponentSchema {
   };
   attributes: {
     amount: Schema.Attribute.Decimal;
-    date: Schema.Attribute.Date;
+    date: Schema.Attribute.String;
     mode: Schema.Attribute.String;
     remark: Schema.Attribute.String;
   };
