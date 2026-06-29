@@ -135,6 +135,9 @@
     },
     "advance_payment": {
       "type": "json"
+    },
+    "checkout_timeStamp": {
+      "type": "string"
     }
   }
 }

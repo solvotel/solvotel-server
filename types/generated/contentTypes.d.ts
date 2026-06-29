@@ -468,6 +468,7 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1022,6 +1023,7 @@ export interface ApiRoomBookingRoomBooking extends Struct.CollectionTypeSchema {
     checkin_time: Schema.Attribute.String;
     checkout_date: Schema.Attribute.Date;
     checkout_time: Schema.Attribute.String;
+    checkout_timeStamp: Schema.Attribute.String;
     children: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

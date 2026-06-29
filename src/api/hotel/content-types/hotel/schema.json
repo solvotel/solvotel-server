@@ -116,6 +116,10 @@
     },
     "res_upi_name": {
       "type": "string"
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
