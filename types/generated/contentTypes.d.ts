@@ -1021,6 +1021,7 @@ export interface ApiRoomBookingRoomBooking extends Struct.CollectionTypeSchema {
     checked_out: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     checkin_date: Schema.Attribute.Date;
     checkin_time: Schema.Attribute.String;
+    checkin_timeStamp: Schema.Attribute.String;
     checkout_date: Schema.Attribute.Date;
     checkout_time: Schema.Attribute.String;
     checkout_timeStamp: Schema.Attribute.String;

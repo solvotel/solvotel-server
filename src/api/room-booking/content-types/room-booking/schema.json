@@ -138,6 +138,9 @@
     },
     "checkout_timeStamp": {
       "type": "string"
+    },
+    "checkin_timeStamp": {
+      "type": "string"
     }
   }
 }
