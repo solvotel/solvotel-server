@@ -71,6 +71,9 @@
     },
     "upi_name": {
       "type": "string"
+    },
+    "inv_prefix": {
+      "type": "string"
     }
   }
 }

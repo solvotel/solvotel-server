@@ -120,6 +120,12 @@
     "blocked": {
       "type": "boolean",
       "default": false
+    },
+    "hotel_inv_prefix": {
+      "type": "string"
+    },
+    "res_inv_prefix": {
+      "type": "string"
     }
   }
 }

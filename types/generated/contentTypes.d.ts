@@ -482,6 +482,7 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
     hotel_email: Schema.Attribute.Email;
     hotel_footer: Schema.Attribute.Text;
     hotel_gst_no: Schema.Attribute.String;
+    hotel_inv_prefix: Schema.Attribute.String;
     hotel_logo: Schema.Attribute.Media<'images'>;
     hotel_mobile: Schema.Attribute.BigInteger;
     hotel_name: Schema.Attribute.String;
@@ -503,6 +504,7 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
     res_email: Schema.Attribute.Email;
     res_footer: Schema.Attribute.Text;
     res_gst_no: Schema.Attribute.String;
+    res_inv_prefix: Schema.Attribute.String;
     res_mobile: Schema.Attribute.BigInteger;
     res_name: Schema.Attribute.String;
     res_pincode: Schema.Attribute.Integer;
@@ -852,6 +854,7 @@ export interface ApiPosOutletPosOutlet extends Struct.CollectionTypeSchema {
     footer: Schema.Attribute.Text;
     gst_no: Schema.Attribute.String;
     hotel_id: Schema.Attribute.String;
+    inv_prefix: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
