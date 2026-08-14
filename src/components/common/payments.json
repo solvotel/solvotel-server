@@ -14,6 +14,9 @@
     },
     "amount": {
       "type": "decimal"
+    },
+    "remark": {
+      "type": "string"
     }
   },
   "config": {}

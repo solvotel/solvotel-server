@@ -75,6 +75,7 @@ export interface CommonPayments extends Struct.ComponentSchema {
   attributes: {
     amount: Schema.Attribute.Decimal;
     mop: Schema.Attribute.String;
+    remark: Schema.Attribute.String;
     time_stamp: Schema.Attribute.String;
   };
 }
