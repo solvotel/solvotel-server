@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pos_subscriptions",
+  "info": {
+    "singularName": "pos-subscription",
+    "pluralName": "pos-subscriptions",
+    "displayName": "pos-subscription"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order_id": {
+      "type": "string"
+    },
+    "plan": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "expiry_date": {
+      "type": "date"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "payment_status": {
+      "type": "string"
+    },
+    "transaction_id": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "pos_outlet": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pos-outlet.pos-outlet"
+    },
+    "renewed_from": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pos-subscription.pos-subscription"
+    }
+  }
+}

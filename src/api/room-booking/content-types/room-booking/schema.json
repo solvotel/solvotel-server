@@ -141,6 +141,9 @@
     },
     "checkin_timeStamp": {
       "type": "string"
+    },
+    "housekeeping_tokens": {
+      "type": "json"
     }
   }
 }

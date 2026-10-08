@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hotel_subscriptions",
+  "info": {
+    "singularName": "hotel-subscription",
+    "pluralName": "hotel-subscriptions",
+    "displayName": "hotel-subscription"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order_id": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "expiry_date": {
+      "type": "date"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "payment_status": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "string"
+    },
+    "transaction_id": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "hotel": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hotel.hotel"
+    },
+    "renewed_from": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hotel-subscription.hotel-subscription"
+    },
+    "plan": {
+      "type": "string"
+    }
+  }
+}

@@ -457,6 +457,48 @@ export interface ApiExpenseExpense extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHotelSubscriptionHotelSubscription
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'hotel_subscriptions';
+  info: {
+    displayName: 'hotel-subscription';
+    pluralName: 'hotel-subscriptions';
+    singularName: 'hotel-subscription';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    amount: Schema.Attribute.Integer;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    expiry_date: Schema.Attribute.Date;
+    hotel: Schema.Attribute.Relation<'oneToOne', 'api::hotel.hotel'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hotel-subscription.hotel-subscription'
+    > &
+      Schema.Attribute.Private;
+    notes: Schema.Attribute.Text;
+    order_id: Schema.Attribute.String;
+    payment_method: Schema.Attribute.String;
+    payment_status: Schema.Attribute.String;
+    plan: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    renewed_from: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::hotel-subscription.hotel-subscription'
+    >;
+    start_date: Schema.Attribute.Date;
+    transaction_id: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
   collectionName: 'hotels';
   info: {
@@ -910,6 +952,51 @@ export interface ApiPosPaymentMethodPosPaymentMethod
   };
 }
 
+export interface ApiPosSubscriptionPosSubscription
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'pos_subscriptions';
+  info: {
+    displayName: 'pos-subscription';
+    pluralName: 'pos-subscriptions';
+    singularName: 'pos-subscription';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    amount: Schema.Attribute.Integer;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    expiry_date: Schema.Attribute.Date;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pos-subscription.pos-subscription'
+    > &
+      Schema.Attribute.Private;
+    notes: Schema.Attribute.Text;
+    order_id: Schema.Attribute.String;
+    payment_method: Schema.Attribute.String;
+    payment_status: Schema.Attribute.String;
+    plan: Schema.Attribute.String;
+    pos_outlet: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::pos-outlet.pos-outlet'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    renewed_from: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::pos-subscription.pos-subscription'
+    >;
+    start_date: Schema.Attribute.Date;
+    transaction_id: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiRestaurantInvoiceRestaurantInvoice
   extends Struct.CollectionTypeSchema {
   collectionName: 'restaurant_invoices';
@@ -1035,6 +1122,7 @@ export interface ApiRoomBookingRoomBooking extends Struct.CollectionTypeSchema {
     customer: Schema.Attribute.Relation<'manyToOne', 'api::customer.customer'>;
     food_tokens: Schema.Attribute.JSON;
     hotel_id: Schema.Attribute.String;
+    housekeeping_tokens: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1898,6 +1986,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::customer.customer': ApiCustomerCustomer;
       'api::expense.expense': ApiExpenseExpense;
+      'api::hotel-subscription.hotel-subscription': ApiHotelSubscriptionHotelSubscription;
       'api::hotel.hotel': ApiHotelHotel;
       'api::inventory-category.inventory-category': ApiInventoryCategoryInventoryCategory;
       'api::inventory-item.inventory-item': ApiInventoryItemInventoryItem;
@@ -1909,6 +1998,7 @@ declare module '@strapi/strapi' {
       'api::pos-outlet-invoice.pos-outlet-invoice': ApiPosOutletInvoicePosOutletInvoice;
       'api::pos-outlet.pos-outlet': ApiPosOutletPosOutlet;
       'api::pos-payment-method.pos-payment-method': ApiPosPaymentMethodPosPaymentMethod;
+      'api::pos-subscription.pos-subscription': ApiPosSubscriptionPosSubscription;
       'api::restaurant-invoice.restaurant-invoice': ApiRestaurantInvoiceRestaurantInvoice;
       'api::restaurant-menu.restaurant-menu': ApiRestaurantMenuRestaurantMenu;
       'api::room-booking.room-booking': ApiRoomBookingRoomBooking;
