@@ -74,6 +74,9 @@
     },
     "inv_prefix": {
       "type": "string"
+    },
+    "ffsai_no": {
+      "type": "string"
     }
   }
 }

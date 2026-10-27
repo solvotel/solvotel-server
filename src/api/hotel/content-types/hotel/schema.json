@@ -126,6 +126,9 @@
     },
     "res_inv_prefix": {
       "type": "string"
+    },
+    "res_ffsai_no": {
+      "type": "string"
     }
   }
 }

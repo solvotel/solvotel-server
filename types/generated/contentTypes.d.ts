@@ -544,6 +544,7 @@ export interface ApiHotelHotel extends Struct.CollectionTypeSchema {
     res_country: Schema.Attribute.String;
     res_district: Schema.Attribute.String;
     res_email: Schema.Attribute.Email;
+    res_ffsai_no: Schema.Attribute.String;
     res_footer: Schema.Attribute.Text;
     res_gst_no: Schema.Attribute.String;
     res_inv_prefix: Schema.Attribute.String;
@@ -893,6 +894,7 @@ export interface ApiPosOutletPosOutlet extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     district: Schema.Attribute.String;
     email: Schema.Attribute.String;
+    ffsai_no: Schema.Attribute.String;
     footer: Schema.Attribute.Text;
     gst_no: Schema.Attribute.String;
     hotel_id: Schema.Attribute.String;
