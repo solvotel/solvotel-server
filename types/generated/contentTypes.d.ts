@@ -741,6 +741,7 @@ export interface ApiKotKot extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     items: Schema.Attribute.JSON;
+    kot_notes: Schema.Attribute.Text;
     kot_number: Schema.Attribute.Integer;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::kot.kot'> &
